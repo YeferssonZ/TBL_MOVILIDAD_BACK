@@ -19,6 +19,9 @@ class TblAlumno(models.Model):
         managed = False
         db_table = 'tbl_alumno'
 
+    def __str__(self):
+        return self.alumno_nombre
+
 
 class TblAlumnoHorario(models.Model):
     alumno_horario_id = models.AutoField(primary_key=True)
@@ -44,6 +47,9 @@ class TblApoderado(models.Model):
         managed = False
         db_table = 'tbl_apoderado'
 
+    def __str__(self):
+        return self.apoderado_nombre
+
 
 class TblCargo(models.Model):
     cargo_id = models.AutoField(primary_key=True)
@@ -66,6 +72,9 @@ class TblColegio(models.Model):
     class Meta:
         managed = False
         db_table = 'tbl_colegio'
+
+    def __str__(self):
+        return self.colegio_nombre
 
 
 class TblEmpleado(models.Model):
@@ -111,6 +120,9 @@ class TblGrado(models.Model):
     class Meta:
         managed = False
         db_table = 'tbl_grado'
+
+    def __str__(self):
+        return self.grado_nombre
 
 
 class TblMovilidad(models.Model):
@@ -163,6 +175,9 @@ class TblParentesco(models.Model):
         managed = False
         db_table = 'tbl_parentesco'
 
+    def __str__(self):
+        return self.parentesco_nombre
+
 
 class TblTipoMantenimiento(models.Model):
     tipo_mantenimiento_id = models.AutoField(primary_key=True)
@@ -183,6 +198,9 @@ class TblVehiculo(models.Model):
     class Meta:
         managed = False
         db_table = 'tbl_vehiculo'
+
+    def __str__(self):
+        return self.vehiculo_marca
 
 
 class TblVehiculoDocumento(models.Model):
@@ -230,6 +248,9 @@ class TblZona(models.Model):
     class Meta:
         managed = False
         db_table = 'tbl_zona'
+
+    def __str__(self):
+        return self.zona_nombre
 
 
 class TipoGasto(models.Model):
